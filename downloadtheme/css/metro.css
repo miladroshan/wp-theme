@@ -1,0 +1,106 @@
+#metro-box{
+    width: 100%;
+    height: 465px;
+    margin: 40px 0 30px 0;
+    direction: ltr;
+    overflow: hidden;
+}
+#metro-box .column{
+    width: 1030px;
+    float: left;
+}
+#metro-box .metro-item{
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 338px;
+}
+#metro-box .metro-item a{
+    color: #fdfdfd;
+}
+#metro-box .metro-item.big{
+    width: 681px;
+}
+#metro-box .metro-item .box-img{
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+#metro-box .metro-item .box-img img{
+    width: 338px;
+    height: 220px;
+}
+#metro-box .metro-item.big .box-img{
+    width: 681px;
+}
+#metro-box .metro-item.big .box-img img{
+    width: 681px;
+    height: 220px;
+}
+#metro-box .metro-item .box-img .metro-content{
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    padding: 15px;
+    height: 160px;
+    background: rgba(46, 204, 113,.7);
+}
+#metro-box .metro-item .box-img:hover .metro-content{
+    bottom: 0;
+    height: 193px;
+
+}
+#metro-box .metro-item .box-img .metro-content h3{
+    font: 13px 'iran';
+    color: #fdfdfd;
+    direction: rtl;
+    text-align: right;
+}
+#metro-box .metro-item .box-img .metro-content p{
+    color: #fdfdfd;
+    line-height: 23px;
+    margin-top: 45px;
+    direction: rtl;
+    text-align: justify;
+}
+.color-blue{
+    background: rgba(52, 152, 219,.7) !important;
+}
+
+.color-red{
+    background: rgba(192, 57, 43,.7) !important;
+}
+.color-carrot{
+    background: rgba(230, 126, 34,.7) !important;
+}
+#metro-box .mCSB_container{
+    height: 450px;
+    overflow: hidden;
+    display: block;
+
+}
+#metro-box .mCSB_scrollTools{
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+#metro-box .mCSB_draggerRail{
+    width: 100%;
+    height: 2px;
+    background: rgb(174, 174, 174);
+    margin-top: 4px;
+}
+#metro-box .mCSB_dragger_bar{
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
