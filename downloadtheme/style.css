@@ -1,6 +1,22 @@
+/*
+Theme Name: Download Theme
+Theme URI: https://madebymilad.com
+Author: Milad Roshan
+Author URI: https://madebymilad.com
+Description: My 2018 default theme is clean, blog-focused, and designed for clarity. Download Theme's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. I designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @font-face{
     font-family: iran;
-    src: url('../fonts/IRANSans.woff') format('woff');
+    src: url('../downloadtheme/fonts/IRANSans.woff') format('woff');
 }
 
 /* 
@@ -166,7 +182,7 @@ a{
     margin: 7px 0 0 0;
 }
 .search input{
-    background: #1F2934 url(../images/search.png) no-repeat ;
+    background: #1F2934 url(../downloadtheme/images/search.png) no-repeat ;
     padding: 5px 10px 5px 70px;
     border: 2px solid #1F2934;
     color: #fdfdfd;
@@ -296,6 +312,11 @@ float: right;
 }
 .post-content{
     padding: 10px 15px;
+}
+.post-content img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 .post-content p{
     font: 12px/2 'iran';
