@@ -29,7 +29,7 @@
             <!-- End Offer Box -->
             <!-- Start Advertising Box -->
             <div class="ads">
-               <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/ads.jpg" alt=""></a>
+               <a href="#"><?php dynamic_sidebar( 'top_ads' ); ?></a>
             </div>   
             <!-- End Advertising Box -->
             <div class="clear"></div>
