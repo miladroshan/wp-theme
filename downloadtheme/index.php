@@ -9,12 +9,20 @@
                 <h3>مطالب پیشنهادی</h3>
                 <div class="demo">
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/images/slider/2.jpg" alt=""><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0 </a> <span>بازدید : 405</span></li>
+                    <?php
+                        $q3=new WP_Query(
+                            array("category_name"=>"important_posts","posts_per_page"=>10)
+                        );
+                        while($q3->have_posts())
+                        {
+                            $q3->the_post();
+                    ?>
+                    <li><?php the_post_thumbnail(); ?><a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                    </a> <span><?php if(function_exists('the_views')) { the_views(); } ?></span></li>
+                    <?php
+                        }
+                    ?>
                     </ul>
                 </div>
             </div>

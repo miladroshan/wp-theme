@@ -605,3 +605,26 @@ float: right;
     float: left;
     margin: 20px 15px;
 }
+.wpmainmenu{
+    height: 85px !important;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    color: #fdfdfd;
+}
+.bgblue{
+    background: #2980b9 !important;
+}
+.bgorange{
+    background: #e67e22 !important;
+}
+.bgviolet{
+    background: #8e44ad !important;
+}
+.bgred{
+    background: #C0392B !important;
+}
+.bggreen{
+    background: #1ABC9C !important;
+}

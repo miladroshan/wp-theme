@@ -37,11 +37,7 @@
     <div class="masthead">
         <div class="main_masthead">
             <!-- Start Top Menu -->
-            <ul>
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">تماس با ما</a></li>
-                <li><a href="#">تبلیغات</a></li>
-            </ul>
+            <?php wp_nav_menu( array( 'theme_location' => 'top_menu',"container"=>"" ) ); ?>
             <!-- End Top Menu -->
             <!-- Start Search Box -->
             <div class="search" role="search">
@@ -56,14 +52,7 @@
         <header>
             <!-- Start Main Navigation -->
             <nav class="nav" role="navigation">
-                <ul>
-                    <li style="background:#2980b9;"><a href="#"><i class="fas fa-home"></i>صفحه اصلی</a></li>
-                    <li style="background:#e67e22;"><a href="#"><i class="fa fa-file-download"></i>نرم افزار</a></li>
-                    <li style="background:#8e44ad;"><a href="#"><i class="fa fa-gamepad"></i>بازی</a></li>
-                    <li style="background:#1abc9c;"><a href="#"><i class="fa fa-check"></i>کنسول</a></li>
-                    <li style="background:#c0392b;"><a href="#"><i class="fa fa-hat-wizard"></i>لوازم جانبی</a></li>
-                    <li style="background:#2c3e50;"><a href="#"><i class="fa fa-video"></i>فیلم</a></li>
-                </ul>
+                <?php wp_nav_menu( array( 'theme_location' => 'main_menu',"container"=>"" ) ); ?>
             </nav>
             <!-- End Main Navigation -->
             <!-- Start logo -->
