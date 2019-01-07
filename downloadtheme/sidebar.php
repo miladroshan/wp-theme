@@ -5,27 +5,42 @@
                     آخرین مطالب
                 </h3>
                 <ul>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
+                    <?php
+                        $q=new WP_Query(
+                            array("posts_per_page"=>6)
+                        );
+                        while($q->have_posts())
+                        {
+                            $q->the_post();
+                    ?>
+                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                    <?php
+                        }
+                        wp_reset_postdata();
+                    ?>
                 </ul>
             </section>
             <section class="sidebox">
                 <h3>
-                    آخرین مطالب
+                    پر دیدگاه ترین ها
                 </h3>
                 <ul>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
-                    <li><a href="#">تماس های رایگان با LINE: Free Calls & Messages v4.1.0</a></li>
+                <?php
+                    $q=new WP_Query(
+                        array(
+                            "posts_per_page"=>6,
+                            "orderby"=>"comment_count",
+                            "order"=>"DECS"
+                            ));
+                    while($q->have_posts())
+                    {
+                        $q->the_post();
+                ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php
+                    }
+                    wp_reset_postdata();
+                ?>
                 </ul>
             </section>
             <!-- Start Side Advertising -->
