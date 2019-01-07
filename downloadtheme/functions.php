@@ -56,6 +56,16 @@ function register_my_menus() {
             'before_title'  => '<h3>',
             'after_title'   => '</h3>',
         ) );
+
+        register_sidebar( array(
+          'name' => __( 'درباره ما فوتر', 'theme-slug' ),
+          'id' => 'aboutus_footer',
+          'description' => __( 'توضیحات درباره ما در قسمت فوتر با 500 کاراکتر', 'theme-slug' ),
+          'before_widget' => '<section class="text-ads">',
+          'after_widget'  => '</section>',
+          'before_title'  => '<h3>',
+          'after_title'   => '</h3>',
+      ) );
       }
 
     }
