@@ -61,11 +61,21 @@ function register_my_menus() {
           'name' => __( 'درباره ما فوتر', 'theme-slug' ),
           'id' => 'aboutus_footer',
           'description' => __( 'توضیحات درباره ما در قسمت فوتر با 500 کاراکتر', 'theme-slug' ),
-          'before_widget' => '<section class="text-ads">',
-          'after_widget'  => '</section>',
-          'before_title'  => '<h3>',
-          'after_title'   => '</h3>',
+          'before_widget' => '<div class="about">',
+          'after_widget'  => '</div>',
+          'before_title'  => '<h5>',
+          'after_title'   => '</h5>',
       ) );
+
+      register_sidebar( array(
+        'name' => __( 'شبکه های اجتماعی فوتر', 'theme-slug' ),
+        'id' => 'social_footer',
+        'description' => __( 'لینک شبکه های اجتماعی', 'theme-slug' ),
+        'before_widget' => '<div class="social">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h5>',
+        'after_title'   => '</h5>',
+    ) );
       }
 
     }
