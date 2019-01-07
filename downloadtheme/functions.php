@@ -32,10 +32,30 @@ function register_my_menus() {
               'id' => 'top_ads',
               'description' => __( 'تبلیغات با سایز 300 در 250 پیکسل، بالای محتوی صفحه اصلی', 'theme-slug' ),
               'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
+              'after_widget'  => '</li>',
+              'before_title'  => '<h2 class="widgettitle">',
+              'after_title'   => '</h2>',
           ) );
+
+          register_sidebar( array(
+              'name' => __( 'تبلیغات سایدبار', 'theme-slug' ),
+              'id' => 'sidebar_ads',
+              'description' => __( 'دو تبلیغ با سایز 125 در 250 در سایدبار سایت', 'theme-slug' ),
+              'before_widget' => '<section class="sidebox">',
+              'after_widget'  => '</section>',
+              'before_title'  => '<h3>',
+              'after_title'   => '</h3>',
+          ) );
+
+          register_sidebar( array(
+            'name' => __( 'تبلیغات متنی', 'theme-slug' ),
+            'id' => 'text_ads',
+            'description' => __( 'تبلیغات متنی با تعداد 4 تبلیغ در هر باکس', 'theme-slug' ),
+            'before_widget' => '<section class="text-ads">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ) );
       }
 
     }

@@ -44,85 +44,36 @@
                 </ul>
             </section>
             <!-- Start Side Advertising -->
+                <?php dynamic_sidebar( 'sidebar_ads' ); ?>
+            <!-- End Side Advertising -->
+            <!-- Start most viewed -->
             <section class="sidebox">
                 <h3>
-                    تبلیغات
+                    پربازدیدترین ها
                 </h3>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/ads-sidebar.jpg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/ads-sidebar.jpg" alt="">
+                <ul>
+                <?php
+                    $q=new WP_Query(
+                        array(
+                            "posts_per_page"=>6,
+                            "meta_key"=>"views",
+                            "orderby"=>"meta_value_num",
+                            "order"=>"DECS"
+                            ));
+                    while($q->have_posts())
+                    {
+                        $q->the_post();
+                ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php
+                    }
+                    wp_reset_postdata();
+                ?>
+                </ul>
             </section>
-            <!-- End Side Advertising -->
+            <!-- End most viewed -->
             <!-- Start Text Advertising -->
-            <section class="text-ads">
-                <h3>
-                    تبلیغات متنی
-                </h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="text-ads">
-                <h3>
-                    تبلیغات متنی
-                </h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>تبلیغات متنی شما فقط با این هزینه</span>
-                            <span>نام سایت شما</span>
-                            <span>سایت شما</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <?php dynamic_sidebar( 'text_ads' ); ?>
             <!-- End Text Advertising -->
             <!-- End Lataste Article -->
         </aside>
