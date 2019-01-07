@@ -41,8 +41,8 @@
             <!-- End Top Menu -->
             <!-- Start Search Box -->
             <div class="search" role="search">
-                <form action="" method="">
-                    <input type="text" name="" value="" placeholder="جستجوی متن مورد نظر" onfocus="this.placeholder=''" onblur="this.placeholder='جستجوی متن مورد نظر'">
+                <form action="<?php bloginfo("home") ?>/" method="get">
+                    <input type="text" name="s" value="" placeholder="جستجوی متن مورد نظر" onfocus="this.placeholder=''" onblur="this.placeholder='جستجوی متن مورد نظر'">
                 </form>
             </div>
             <!-- End Search Box -->
