@@ -1,6 +1,7 @@
 <?php
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
+    add_post_type_support( 'support', 'thumbnail' );
 }
 
 function register_my_menus() {
@@ -76,6 +77,20 @@ function register_my_menus() {
         'before_title'  => '<h5>',
         'after_title'   => '</h5>',
     ) );
+
+    function create_post_type() {
+      register_post_type( 'support',
+        array(
+          'labels' => array(
+            'name' => __( 'حامیان ما' ),
+            'singular_name' => __( 'حامیان' )
+          ),
+          'public' => true,
+          'has_archive' => true,
+        )
+      );
+    }
+    add_action( 'init', 'create_post_type' );
       }
 
     }
