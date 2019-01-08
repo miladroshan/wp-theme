@@ -6,7 +6,7 @@
         <div class="clear"></div>
         <!-- Start Article -->
         <?php
-            $d=array();
+            $c=array();
             $mytags=array();
 
             while(have_posts())
