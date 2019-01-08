@@ -6,9 +6,18 @@
         <div class="clear"></div>
         <!-- Start Article -->
         <?php
+            $d=array();
+            $mytags=array();
+
             while(have_posts())
             {
                 the_post();
+                $mycat=wp_get_post_categories(get_the_ID());
+                $t2=wp_get_post_tags(get_the_ID());
+                foreach($t2 as $junk)
+                {
+                    $mytags[]=$junk->term_id;
+                }
         ?>
             <!-- Start Article -->
             <article class="post">
@@ -105,7 +114,43 @@
         <div class="related">
             <h4>مطالب مرتبط</h4>
             <ul>
-                <li>
+                    <?php
+                        $q=new WP_Query(
+                            array(
+                                "posts_per_page"=>6,
+                                "category__in"=>$mycat,
+                                "tag__in"=>$mytags,
+                                "post__not_in"=>array(get_the_ID()),
+                                "orderby"=>"rand"
+                            )
+                            );
+                            while($q->have_posts())
+                            {
+                                $q->the_post();
+                                ?>
+
+
+<li>
+                    <a href="<?php the_permalink(); ?>" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})">
+                    <?php the_post_thumbnail(); ?>
+                    </a>
+                    <div style="display:none">
+                    
+                        <div id="sub14"><?php the_title(); ?></div>
+                    </div>
+                </li>
+
+                                <?php
+                            }
+
+
+                    ?>
+
+
+
+
+                
+                <!-- <li>
                     <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
                     <div style="display:none">
                         <div id="sub14">حجم فایل 300 مگابایت</div>
@@ -134,13 +179,7 @@
                     <div style="display:none">
                         <div id="sub14">حجم فایل 300 مگابایت</div>
                     </div>
-                </li>
-                <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- End Related -->
