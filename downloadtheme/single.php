@@ -145,41 +145,6 @@
 
 
                     ?>
-
-
-
-
-                
-                <!-- <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})"><img src="images/slider/4.jpg" alt=""></a>
-                    <div style="display:none">
-                        <div id="sub14">حجم فایل 300 مگابایت</div>
-                    </div>
-                </li> -->
             </ul>
         </div>
         <!-- End Related -->
