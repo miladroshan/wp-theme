@@ -66,20 +66,37 @@
                 <span class="fa fa-download"></span> دانلود
             </a>
             <div style="display:none">
-                    <div id="sub10">حجم فایل 300 مگابایت</div>
+                <div id="sub10">
+                    <?php
+                    $t=get_post_meta(get_the_ID(), "link", true);
+                    $t=explode("\n",$t);
+                    $c=1;
+                    foreach($t as $junk)
+                    {
+                        echo "<a href='$junk'>لینک $c</a><br>";
+                        $c++;
+                    }
+                    ?>
                 </div>
+            </div>
             <a href="#" class="help" onmouseover="tooltip.pop(this, '#sub11', {position:0, effect:'slide'})">
                 <span class="fa fa-life-ring"></span> راهنما
             </a>
             <div style="display:none">
-                    <div id="sub11">راهنمای کامل استفاده از فایل</div>
-                </div>
+                <div id="sub11"><?php echo nl2br(get_post_meta(get_the_ID(),"help",true)) ?></div>
+            </div>
             <a href="#" class="password" onmouseover="tooltip.pop(this, '#sub12', {position:0, effect:'slide'})">
                 <span class="fa fa-info"></span> رمز فایل
             </a>
             <div style="display:none">
-                    <div id="sub12">pass : MiladRoshan</div>
-                </div>
+                <div id="sub12"><?php echo get_post_meta(get_the_ID(), "file_pass", true) ?></div>
+            </div>
+            <a href="#" class="password" onmouseover="tooltip.pop(this, '#sub13', {position:0, effect:'slide'})">
+                <span class="fa fa-info"></span> مشخصات
+            </a>
+            <div style="display:none">
+                <div id="sub13"><?php echo nl2br(get_post_meta(get_the_ID(), "info", true)) ?></div>
+            </div>
 
         </div>
         <!-- End Meta -->
