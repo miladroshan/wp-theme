@@ -1,0 +1,52 @@
+
+@media screen and (min-device-width: 768px) and (max-device-width:1024px){
+
+}
+@media screen and (max-width: 767px){
+    #main{
+        width: 100%;
+        margin-top: 0;
+    }
+    .masthead, .main_masthead{
+        width: 100%;
+        height: auto;
+        float: right;
+    }
+    .main_masthead > ul > li{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .search{
+        width: 97%;
+        margin: 0;
+    }
+    .search input {
+        width: 97%;
+        padding-left: 0px;
+    }
+    .nav ul > li{
+        margin: 10px 3px;
+    }
+    .logo, .ads{
+        text-align: center;
+        float: none;
+    }
+    .main-container{
+        width: 100%
+    }
+    .main-post{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .offer{
+        width: 100%;
+    }
+    .offer ul{
+        width: 100%;
+    }
+    .post{
+        width: 100%;
+    }
+    
+}

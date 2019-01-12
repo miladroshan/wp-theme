@@ -127,10 +127,8 @@
                             while($q->have_posts())
                             {
                                 $q->the_post();
-                                ?>
-
-
-<li>
+                    ?>
+                <li>
                     <a href="<?php the_permalink(); ?>" class="download" onmouseover="tooltip.pop(this, '#sub14', {position:0, effect:'slide'})">
                     <?php the_post_thumbnail(); ?>
                     </a>
@@ -148,7 +146,11 @@
             </ul>
         </div>
         <!-- End Related -->
+
+       
+
     </div>
+
     <!-- Start sidebar -->
     <?php get_sidebar("single"); ?>
     <!-- End sidebar -->

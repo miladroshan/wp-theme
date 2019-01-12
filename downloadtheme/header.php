@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/metro.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tooltip.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
     <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.8.2.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/scrollbar.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.easy-ticker.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/tooltip.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $("#metro-box").mCustomScrollbar({
@@ -36,9 +36,6 @@
     <!-- Start Header -->
     <div class="masthead">
         <div class="main_masthead">
-            <!-- Start Top Menu -->
-            <?php wp_nav_menu( array( 'theme_location' => 'top_menu',"container"=>"" ) ); ?>
-            <!-- End Top Menu -->
             <!-- Start Search Box -->
             <div class="search" role="search">
                 <form action="<?php bloginfo("home") ?>/" method="get">
@@ -46,6 +43,10 @@
                 </form>
             </div>
             <!-- End Search Box -->
+            <!-- Start Top Menu -->
+            <?php wp_nav_menu( array( 'theme_location' => 'top_menu',"container"=>"" ) ); ?>
+            <!-- End Top Menu -->
+            
         </div>
     </div>
     <div id="main" role="main">
